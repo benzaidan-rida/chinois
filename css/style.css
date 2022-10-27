@@ -1,0 +1,207 @@
+/*----------- GENERAL CSS SETTING --------------*/
+    @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Poppins:wght@500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+    :root{
+        --color-red-china :#d30106;
+        --color-orange-china:#fea931;
+        --color-yello-china:#ffcd41;
+        --color-yellow-desert:hsl(44deg 77% 65%);
+        --color-pink-light:#f7dec0;
+        --color-pink:#ff4e6d;
+        --color-brown:#c93c39;
+        --color-brown-heavy:#84171a;
+        --color-red:#ff2b23;
+        --color-primary:#009ef7;
+        --color-success:#389663;
+        --color-success-light:#e8fff3;
+        --color-warning:#ffc700;
+        --color-purple:#7139e8;
+        --color-info:#43ced7;
+        --color-bg-light:#f5f8fa;
+        --color-muted:#7e86a6;
+        --font-main: 'Poppins';
+        --font-secondary : 'Bubblegum San';
+    }
+    *{
+        box-sizing: border-box;
+        font-family: var(--font-main), sans-serif;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    a{
+        text-decoration: none;
+    }
+    ul{
+        list-style: none;
+    }
+    .object-fit-cover{
+        object-fit: cover;
+    }
+    .absolute-fill-all{
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+/*--------- Navbar ------------------------------------*/
+    nav.main-nav{
+        background-color: var(--color-orange-china);
+    }
+    nav.main-nav ul.nav li a{
+        font-size: .8rem;
+    }
+    nav.main-nav ul.nav li .main-red-button a{
+        background-color: var(--color-red-china);
+        font-size: .7rem;
+        transition: .25s all ease-in-out;
+    }
+    nav.main-nav ul.nav li > a{
+        transition: .35s all ease-in-out;
+    }
+    nav.main-nav ul.nav li > a.active{
+        color:var(--color-red-china)!important;
+    }
+    nav.main-nav ul.nav li > a:hover{
+        color: var(--color-brown-heavy)!important;
+    }
+    nav.main-nav ul.nav li .main-red-button a:hover{
+        background-color: var(--color-brown-heavy);
+    }
+    @media only screen and (max-width: 768px) {
+        /*------- navbar main ------------------*/
+        nav.main-nav .nav {
+            position: fixed;
+            background-color: var(--color-orange-china);
+            top:0;
+            left:0;
+            right:0;
+            bottom: 0;
+            padding: 20px;
+            flex-direction: column!important;
+            transform: translateX(-100%);
+            transition:.3s all ease-in-out;
+            z-index: 2;
+
+        }
+        nav.main-nav .nav.active{
+            transform: translateX(0%);
+        }
+        nav.main-nav ul.nav li.nav-header{
+            display: flex!important;
+        }
+        nav.main-nav ul.nav li.nav-header button{
+            background:none;
+            border: none;
+            transition: .25s all ease-in-out;
+        }
+        nav.main-nav ul.nav li.nav-header button:hover{
+            color:var(--color-red-china)
+        }
+        /*-- Mobile button toggle--- */
+        nav.main-nav button.nav-mobile-btn{
+            display: block!important;
+            background: none;
+            border: none;
+        }
+        nav.main-nav .nav-mobile-btn span{
+            width: 30px;
+            height:3px;
+            margin-bottom: 4px;
+            background-color: var(--color-red-china);
+        }
+
+
+    }
+/*----------- COVER -------------------------------*/
+.main-cover{
+    background-color: #fea93147;
+}
+.main-cover::before{
+    background-image: url('../images/china-gadget-10.png');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center left;
+    content: '';
+    top:0;
+    left:0;
+    position: absolute;
+    opacity: .1;
+    z-index: -1;
+}
+.main-cover p {
+    font-size: .7rem;
+}
+.main-cover  .align-self-center a.services-btn{
+    background-color: var(--color-red-china);
+}
+
+/*--------------- Index CSS STYLING ----------------*/
+.services .service-item{
+    background-color: var(--color-red-china);
+}
+.services .inner-service-item{
+    border: 2px solid var(--color-orange-china);
+}
+.services .inner-service-item .icon{
+    background-color: var(--color-orange-china);
+    width:50px;
+    height:50px;
+}
+.services .inner-service-item p{
+    font-size: .7rem;
+}
+
+/*------ Contact Section ------------------*/
+.contact-section::after{
+    background: rgb(211,1,6);
+    background: linear-gradient(124deg, rgba(211,1,6,1) 51%, rgba(254,169,49,1) 100%);
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 0;
+    left:-10%;
+    right: -10%;
+    bottom: 0;
+}
+
+
+/*------- GENERAL COMPONENT -----------------------*/
+.custom-header .header-main {
+    background-color: #c80a16;
+}
+.custom-header .header-main h2{
+    color: var(--color-orange-china);
+    text-shadow: 4px 1px 7px rgba(0,0,0,0.6);
+}
+.custom-header .header-main p{
+    font-size:.7rem ;
+}
+.custom-header .header-main a.button{
+    background-color: #123646;
+    cursor: pointer;
+}
+/*------------ Index CSS -------------------*/
+    /*---------our services -----------------*/
+    .our-services h3.title::after{
+        content: '';
+        left:calc(50% - 9%);
+        width: 9%;
+        background-color: #84171a;
+        height: 3px;
+        top:-10px;
+        position:absolute;
+        transform: rotate(-30deg);
+    }
+    .our-services h3.title::before{
+        content: '';
+        right:calc(50% - 9%);
+        width: 9%;
+        background-color: #84171a;
+        height: 3px;
+        top:-10px;
+        position:absolute;
+        transform: rotate(30deg);
+    }
